@@ -96,20 +96,28 @@ function dispalyGreetings(today){
         hrs = today.getHours();
         name=""
         if (hrs < 12)
-            greet = 'Good Morning  '+name;
-        else if (hrs >= 12 && hrs <= 17)
-            greet = 'Good Afternoon '+name;
-        else if (hrs >= 17 && hrs <= 24)
-            greet = 'Good Evening  '+name;
+            greet = 'Время поработать '+name;
+        else if (hrs >= 12 && hrs <= 13)
+            greet = 'Завтрак '+name;
+        else if (hrs >= 13 && hrs <= 16.5)    
+            greet = 'Время поработать '+name;
+        else if (hrs >= 16.5 && hrs <= 18)    
+            greet = 'Развиваемся '+name;
+        else if (hrs >= 18 && hrs <= 19)    
+            greet = 'Ужин '+name;
+        else if (hrs >= 19 && hrs <= 21.5)
+            greet = 'Развиваемся  '+name;
+        else if (hrs >= 21.5)
+            greet = 'Отдых  '+name;
         document.getElementById('greet').innerHTML = greet;
 
     }
 
     function dispalyDate(today) {  
        
-        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        const monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
+        const days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+        const monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+  "Июль", "Август", "Сентябрь", "Окябрь", "Ноябрь", "Декабрь"
 ];
 
         var dayName = days[today.getDay()];
